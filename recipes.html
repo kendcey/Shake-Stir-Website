@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shake & Stir - Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar(event)"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="subscribe.html">Subscribe</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html" class="logo-header"> <img src="images/logo.svg" alt="Shake & Stir" class="logo-img"></a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="recipes.html">Recipes</a></li>
+            <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+            <li class="hideOnMobile"><a href="subscribe.html">Subscribe</a></li>
+            <li class="menu-button" onclick="showSidebar(event)"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="h1-p-container">
+            <div class="h1-background shared-width">
+                <h1 class="page-title">Recipes</h1>
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <h2>Chocolate</h2>
+            <div class="recipe-row">
+                <div class="recipe-card">
+                    <img src="images/choc-straw.jpg" alt="Choco-Strawberry Delight">
+                    <h3>Choco-berry Delight</h3>
+                    <p>Cook Time: 10 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('choco-strawberry')">Full Recipe</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/smoothie2.jpg" alt="Choco-Vanilla Twist">
+                    <h3>Choco-Vanilla Twist</h3>
+                    <p>Cook Time: 12 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('choco-vanilla')">Full Recipe</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/choc-mint.jpg" alt="Choco-Mint Breeze">
+                    <h3>Choco-Mint Breeze</h3>
+                    <p>Cook Time: 15 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('choco-mint')">Full Recipe</button>
+                </div>
+            </div>
+
+            <h2>Strawberry</h2>
+            <div class="recipe-row">
+                <div class="recipe-card">
+                    <img src="images/straw-choc.jpg" alt="Straw-Choco Bliss">
+                    <h3>Straw-Choco Bliss</h3>
+                    <p>Cook Time: 8 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('straw-choco')">Full Recipe</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/straw-banana.jpg" alt="Straw-Banana Smoothie">
+                    <h3>Straw-Banana Smoothie</h3>
+                    <p>Cook Time: 10 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('straw-banana')">Full Recipe</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/straw-vanilla.jpg" alt="Straw-Vanilla Swirl">
+                    <h3>Straw-Vanilla Swirl</h3>
+                    <p>Cook Time: 9 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('straw-vanilla')">Full Recipe</button>
+                </div>
+            </div>
+
+            <h2>Vanilla</h2>
+            <div class="recipe-row">
+                <div class="recipe-card">
+                    <img src="images/vanilla-choc.jpg" alt="Vanilla-Choco Delight">
+                    <h3>Vanilla-Choco Delight</h3>
+                    <p>Cook Time: 7 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('vanilla-choco')">Full Recipe</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/img12.jpg" alt="Vanilla Berry Bliss">
+                    <h3>Vanilla Berry Bliss</h3>
+                    <p>Cook Time: 10 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('vanilla-berry')">Full Recipe</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/img11.jpg" alt="Vanilla Caramel Dream">
+                    <h3>Vanilla Caramel Dream</h3>
+                    <p>Cook Time: 6 mins</p>
+                    <button class="full-recipe-button" onclick="showRecipe('vanilla-caramel')">Full Recipe</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="recipe-modal" class="recipe-modal">
+        <div class="recipe-modal-content">
+            <span class="close-button" onclick="closeRecipe()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </span>
+            <h2 id="recipe-title"></h2>
+            <p id="recipe-description" class="h4"></p>
+            <h3>Ingredients</h3>
+            <ul id="recipe-ingredients"></ul>
+            <h3>Instructions</h3>
+            <p id="recipe-instructions"></p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="images/logo.svg" alt="Shake & Stir" class="footer-logo-img"></a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <form action="subscribe.html" method="post">
+                    <label for="newsletter-email">Subscribe to our Newsletter</label>
+                    <input type="email" id="newsletter-email" name="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shake & Stir. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/recipe-popup.js"></script>
+</body>
+</html>
